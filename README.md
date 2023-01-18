@@ -60,3 +60,8 @@ client.on("message", async (msg) => {
   }
 });
 ```
+
+# Command
+
+> - `!zi` : Menggunakan bot
+> - `!everyone` : Tag all member group
