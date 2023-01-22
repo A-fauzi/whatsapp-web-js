@@ -1,11 +1,11 @@
 import data from "./data.js";
 
-async function command(client) {
+async function gpt(client) {
   client.on("message", (message) => {
-    if (message.body === "1") {
+    if (message.body === "2") {
       message.reply(data);
     }
   });
 }
 
-export default command;
+export default gpt;

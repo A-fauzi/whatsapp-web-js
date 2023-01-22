@@ -1,11 +1,11 @@
 import data from "./data.js";
 
-async function command(client) {
+async function downloadMedia(client) {
   client.on("message", (message) => {
-    if (message.body === "1") {
+    if (message.body === "3") {
       message.reply(data);
     }
   });
 }
 
-export default command;
+export default downloadMedia;

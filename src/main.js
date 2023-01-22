@@ -1,7 +1,9 @@
-const whatsappClient = require("./whatsappClient/whatsappClient");
+import whatsappClient from "./whatsappClient/whatsappClient.js";
 
-function main() {
-  whatsappClient;
+export default function main() {
+  try {
+    whatsappClient();
+  } catch (error) {
+    console.error(error);
+  }
 }
-
-module.exports = main();

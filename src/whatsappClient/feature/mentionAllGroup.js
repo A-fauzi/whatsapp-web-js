@@ -19,4 +19,4 @@ async function mentionAllGroup(client) {
   });
 }
 
-module.exports = mentionAllGroup;
+export default mentionAllGroup;

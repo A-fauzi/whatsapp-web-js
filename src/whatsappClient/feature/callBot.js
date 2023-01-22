@@ -1,9 +1,23 @@
+import { prefix } from "../prefix.js";
+
 // Callbot
-async function callBot(client) {
-  client.on("message", (message) => {
+export default async function callBot(client) {
+  client.on("message", async (message) => {
+    if (!prefix.includes(message.body)) {
+      const chat = await message.getChat();
+      const contact = await message.getContact();
+
+      await chat.sendMessage(
+        `Hello @${contact.id.user} | Gunakan command *!zi*`,
+        {
+          mentions: [contact],
+        }
+      );
+    }
     if (message.body === "!zi") {
       const feature = listFeature();
       message.reply(feature);
+    } else {
     }
   });
 }
@@ -24,5 +38,3 @@ function commandFeature() {
 
 function f2(params) {}
 function f3(params) {}
-
-module.exports = callBot;
